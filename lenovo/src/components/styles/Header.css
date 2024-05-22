@@ -1,0 +1,23 @@
+body.active-modal {
+    overflow-y: hidden;
+}
+
+body.open-modal {
+    overflow-y: hidden;
+}
+
+#register-modal {
+    width: 50%;
+    height: 80vh;
+    margin: 20rem;
+    margin-top: 1.5%;
+}
+
+.login-modal {
+    width: 40%;
+    height: 60%;
+    margin: 25rem;
+    margin-top: 5%;
+    background-color: #fefefe;
+    border-radius: 0.5rem;
+}

@@ -1,0 +1,91 @@
+main {
+    height: 491vh;
+}
+
+#galaxy1 {
+    height: 75vh;
+}
+
+#card {
+    height: 10vh;
+    width: 90%;
+    display: flex;
+    background-color: blue;
+    margin: 2.5rem;
+    position: absolute;
+    top: 25rem;
+}
+
+#forms {
+    display: flex;
+    width: 90%;
+}
+
+form input {
+    width: 90%;
+    padding: 2px;
+    outline: none;
+    border: 1px;
+    border-style: solid;
+    border-color: aqua;
+}
+
+#galaxy2 {
+    height: 80vh;
+}
+
+
+/*links*/
+
+#first ul {
+    display: flex;
+}
+
+#first li {
+    list-style: none;
+}
+
+#first a {
+    display: block;
+    color: rgb(91, 87, 87);
+    padding: 0.5rem;
+    margin: 0 1.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1rem;
+}
+
+#first a:hover {
+    color: black;
+    font-weight: bold;
+}
+
+#galaxy3 {
+    height: 85vh;
+    width: 93%;
+}
+
+#galaxy4 {
+    height: 80vh;
+}
+
+#galaxy5 {
+    height: 80vh;
+}
+
+#galaxy6 {
+    height: 60vh;
+}
+
+footer {
+    height: 60vh;
+}
+
+#center {
+    text-align: center;
+}
+
+.BB {
+    word-spacing: 5px;
+    font-family: monospace;
+    font-size: 0.5rem;
+}

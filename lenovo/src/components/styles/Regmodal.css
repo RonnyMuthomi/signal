@@ -1,0 +1,43 @@
+ #LG,
+ #terms {
+     color: #F3950D;
+     text-decoration: none;
+ }
+ 
+ .field-group {
+     width: 100%;
+     position: relative;
+ }
+ 
+ .input-field {
+     width: 42%;
+     outline: 0;
+     border: 2px solid #999999;
+     border-radius: 3px;
+     background: transparent;
+     color: #999999;
+     height: 6vh;
+     /*padding-left: 60px;*/
+ }
+ /*.input-field::placeholder {
+      color: #999999;
+  }*/
+ 
+ .icon {
+     position: absolute;
+     left: 36%;
+     top: 8px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     color: #999999;
+     font-size: 1.6em;
+ }
+ /* .input-field:focus {
+     color: #ffffff;
+     border-color: #ffffff;
+ }
+ 
+ .input-field:focus~.icon {
+     color: #ffffff;
+ } */

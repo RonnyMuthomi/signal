@@ -1,10 +1,11 @@
+import { Languages } from "../component/languages"
 
 
 function Language() {
   return (
-    <div>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, autem.</p>
-    </div>
+    <>
+     <Languages/>
+    </>
   )
 }
 

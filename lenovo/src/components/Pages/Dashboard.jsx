@@ -1,9 +1,21 @@
 
+//import React from 'react'
 
-export default function Dashboard() {
+import { Dboard } from "../component/dboard";
+
+
+function Dashboard() {
   return (
-    <div>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, reiciendis?</p>
-    </div>
-  );
+    <>
+    <main className="h-full">
+    <Dboard/>
+    </main>
+    
+   
+      
+    </>
+  )
 }
+
+export default Dashboard;
+

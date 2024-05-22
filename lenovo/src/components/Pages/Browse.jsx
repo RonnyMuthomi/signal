@@ -1,9 +1,9 @@
-
+//import React from 'react'
 
 export default function Browse() {
   return (
     <div>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, delectus.</p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, animi.
     </div>
   )
 }

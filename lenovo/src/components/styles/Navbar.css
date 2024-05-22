@@ -3,12 +3,16 @@
 }
 
 nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #202424;
     position: sticky;
     top: 0;
 }
 
 nav ul {
-    display: flex;
+    display: inline-flex;
 }
 
 nav ul li {
