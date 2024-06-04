@@ -1,14 +1,15 @@
 
 //import React from 'react'
 
-import { Dboard } from "../component/dboard";
+//import { Dboard } from "../component/dboard";
+import { UserDash } from "../component/user-dash";
 
 
 function Dashboard() {
   return (
     <>
     <main className="h-full">
-    <Dboard/>
+    <UserDash/>
     </main>
     
    

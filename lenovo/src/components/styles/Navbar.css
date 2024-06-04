@@ -6,8 +6,9 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #202424;
+    background-color: #06355d;
     position: sticky;
+    height: 13vh;
     top: 0;
 }
 

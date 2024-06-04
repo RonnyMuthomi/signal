@@ -6,7 +6,8 @@ main {
     height: 75vh;
 }
 
-#card {
+
+/* #card {
     height: 10vh;
     width: 90%;
     display: flex;
@@ -14,24 +15,10 @@ main {
     margin: 2.5rem;
     position: absolute;
     top: 25rem;
-}
-
-#forms {
-    display: flex;
-    width: 90%;
-}
-
-form input {
-    width: 90%;
-    padding: 2px;
-    outline: none;
-    border: 1px;
-    border-style: solid;
-    border-color: aqua;
-}
+} */
 
 #galaxy2 {
-    height: 80vh;
+    height: 350vh;
 }
 
 
@@ -84,8 +71,40 @@ footer {
     text-align: center;
 }
 
-.BB {
-    word-spacing: 5px;
-    font-family: monospace;
-    font-size: 0.5rem;
+.greens {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+.fontserif {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.center {
+    margin-left: 15rem;
+}
+
+#one {
+    color: white;
+    margin-left: 20rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: x-large;
+}
+
+.two {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: x-large;
+}
+
+.vendors {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.fonts {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.buttons {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
 }

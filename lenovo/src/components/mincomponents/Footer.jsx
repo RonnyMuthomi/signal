@@ -1,17 +1,23 @@
 
-
+import {Link} from 'react-router-dom'
+import { FaEnvelope} from "react-icons/fa";
 export default function Footer() {
   return (
     <>
-      <footer className='flex w-full bg-blue-700 '>
-         <p className='text-white'>footer footer
-         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat quae
-          iusto temporibus explicabo veritatis magnam cumque unde tempora asperiores!
-           Consequatur cumque animi sapiente, nam eaque reprehenderit consequuntur suscipit
-            officia veritatis sequi delectus eos optio et nihil inventore magni ipsam amet 
-            ab aspernatur quisquam totam pariatur
-          dolorum! Sint quidem modi minima, asperiores, repudiandae vero saepe expedita at, 
-          recusandae obcaecati ex quam?</p>
+      <footer className='flex w-full bg-white '>
+      <div className='mt-[5rem] ml-[30rem]'>FOLLOW US</div>
+      <div className='mt-[10rem] '>
+      <ul className='flex  mr-[5rem]'>
+      <Link to=""><FaEnvelope></FaEnvelope></Link>
+      <Link to=""  className='ml-5'><FaEnvelope></FaEnvelope></Link>
+      <Link to=""  className='ml-5'><FaEnvelope></FaEnvelope></Link>
+      </ul>
+     
+      </div>
+     
+      
+      
+         
       </footer>
     </>
   )

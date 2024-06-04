@@ -1,4 +1,4 @@
- #LG,
+ /* #LG,
  #terms {
      color: #F3950D;
      text-decoration: none;
@@ -17,11 +17,11 @@
      background: transparent;
      color: #999999;
      height: 6vh;
-     /*padding-left: 60px;*/
+     /*padding-left: 60px;
  }
  /*.input-field::placeholder {
       color: #999999;
-  }*/
+  }
  
  .icon {
      position: absolute;

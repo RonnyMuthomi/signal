@@ -1,20 +1,21 @@
-//import img1 from '../Images/img1.jpg'
-import img2 from '../Images/img2.jpg'
+import img1 from '../Images/one.png'
 
+import img3 from '../Images/11.png'
+import img4 from '../Images/client.png'
 import '../styles/Main.css'
-import {NavLink,Link } from 'react-router-dom'
-import { CarouselSpacing } from '../ui/Demo/caraousel'
-import { Brown } from '../component/brown'
-import { CarouselDemo } from '../ui/Demo/Carousel3'
-import { useEffect, useState } from 'react'
-import Slider from '../mincomponents/Slider'
-//import { CarouselDemo } from '../ui/Demo/Carousel3'
+import {Link } from 'react-router-dom'
 
+
+
+import { useEffect, useState } from 'react'
+//import Slider from '../mincomponents/Slider'
+//import { CarouselDemo } from '../ui/Demo/Carousel3'
+import { FaEnvelope} from "react-icons/fa";
 
 
 export default function Home() {
   
-const images=["img8.jpg","img1.jpg", "img2.jpg", "img3.jpg"];
+const images=["banner_party.webp", "12.webp","13.webp"];
 const [currentIndex,setCurrentIndex]=useState(0);
 
 useEffect(() => {
@@ -23,13 +24,16 @@ useEffect(() => {
   }, 3000);
   return () => clearInterval(interval); 
 }, [images.length]);
+
   return (
     <>
     {/*main section*/}
-      <main className="bg-[whitesmoke]">
+      <main className="bg-white">
        {/* section1*/}
-      <section id='galaxy1' className="flex bg-white  w-full">
+      <section id='galaxy1' className="flex bg-white  w-auto">
         <div id="grid-container1" className='bg-white h-96.5 w-full'>
+        
+        {/*image div */}
            <div>
            {images.map((image, index) => (
         <img
@@ -40,63 +44,158 @@ useEffect(() => {
           className='w-full h-[75vh]'
         />
       ))}
+    
            </div>
           
-           
-          <Brown/>
+           <div className=' center absolute top-[15rem] text-white'>
+          <h1 id='one'>
+            Plan The Perfect Event
+          </h1>
+          <p className='two ml-[10rem]'>Eventective is the most comprehensive resource to help you plan your event.
+</p>
         </div>
-         {/* section2*/}
-      </section>
-      <section id='galaxy2' className='flex bg-white mt-10 w-90 m-10'>
-        <div id="grid-container2" className="grid bg-white h-full w-full grid-cols-2 gap-5">
+         
+        </div>
        
+      </section>
+
+        {/* section2*/}
+      <section id='galaxy2' className='flex bg-orange-400 mt-0  w-90 m-10  '>
+        <div id="grid-container2" className="grid bg-orange-400 h-full w-full grid-cols-2 ">
+       
+        
+        
           <div className='bg-white rounded-5'>
-            <h2 className='m-10 text-black font-mono font-bold text-6xl'>A space for every moment</h2>
-            <p className='m-10 font-mono font-light text-lg'>Book professionalism by activity</p>
-            <div id='Links'>
+            <h2 className='m-10 text-slate-800 ml-[15rem] font-semibold text-3xl'>How Eventective Works</h2>
+            <div className='ml-[5rem] mt-[10rem] fonts'>
+              <p className='vendors  text-slate-800 text-3xl font-bold'>Vendors</p>
+
+              <div className='mt-10 '> <p className='ml-8 text-slate-600 text-2xl'> Create Your profile</p>
+              <div className='mt-[-1.5rem]'> <FaEnvelope></FaEnvelope></div>
+              </div>
+
+              <div className='mt-10 '> <p className='ml-8  text-slate-600 text-2xl '> Showcase Your Services</p>
+              <div className='mt-[-1.5rem] '> <FaEnvelope></FaEnvelope></div>
+              </div>
+
+              <div className='mt-10 '> <p className='ml-8  text-slate-600 text-2xl'> Receive Booking Requests</p>
+              <div className='mt-[-1.5rem] '> <FaEnvelope></FaEnvelope></div>
+              </div>
+
+              <div className='mt-10 '> <p className='ml-8  text-slate-600 text-2xl'> Deliver Outstanding Services</p>
+              <div className='mt-[-1.5rem]'> <FaEnvelope></FaEnvelope></div>
+              </div>
+
+              <div className='mt-10 '> <p className='ml-8  text-slate-600 text-2xl'> Get Paid Securely</p>
+              <div className='mt-[-1.5rem] mr-4.8'> <FaEnvelope></FaEnvelope></div>
+              </div>
               
-                <div id='first'>
-                  <ul>
-                   <li> <Link to="/Photoshoot">Photoshoot</Link></li>
-                   <li><NavLink to="/Preevent">Planning&pre-event</NavLink></li>
-                   <li><NavLink to="/Birthday">Birthday parties</NavLink></li>
-                  </ul>
-                
-                </div>
-                <div id='first'>
-                  <ul>
-                  <li><NavLink to="/Videoshoot">Videoshoot</NavLink></li> 
-                  <li><NavLink to="/Babyshower">Baby shower</NavLink></li>
-                  <li><NavLink to="/Bridal">Bridal shower</NavLink></li>
-                  </ul>
-
-                </div>
-                <div id='first'>
-                  <ul>
-                  <li><NavLink to="/Graduation">Graduation party</NavLink></li>
-                  <li><NavLink to="/Team">Team building</NavLink></li>
-                  </ul>
-                </div>
+              
             </div>
+            <Link to='/Vendors'><button className='buttons bg-pink-800 mt-12 ml-[5rem] h-[6vh] w-[12rem] rounded-[1rem] text-white'>
 
-          </div>
+            Join as a Vendor today</button></Link>
+
+            {/*Event organizer*/}
+
+            <div className='mt-[10rem]'>
+              <img src={img3} alt="image" />
+            </div>
+           
+           {/*Client*/}
+           <div className='ml-[5rem] mt-[10rem] fonts'>
+              <p className='vendors  text-slate-800 text-3xl font-bold'>Clients</p>
+
+              <div className='mt-10 '> <p className='ml-8 text-slate-600 text-2xl'> Create Your profile</p>
+              <div className='mt-[-1.5rem]'> <FaEnvelope></FaEnvelope></div>
+              </div>
+
+              <div className='mt-10 '> <p className='ml-8  text-slate-600 text-2xl '> Explore Events</p>
+              <div className='mt-[-1.5rem] '> <FaEnvelope></FaEnvelope></div>
+              </div>
+
+              <div className='mt-10 '> <p className='ml-8  text-slate-600 text-2xl'> Book Tickets Easily</p>
+              <div className='mt-[-1.5rem] '> <FaEnvelope></FaEnvelope></div>
+              </div>
+
+              <div className='mt-10 '> <p className='ml-8  text-slate-600 text-2xl'> Connect with Hosts</p>
+              <div className='mt-[-1.5rem]'> <FaEnvelope></FaEnvelope></div>
+              </div>
+
+              <div className='mt-10 '> <p className='ml-8  text-slate-600 text-2xl'> Enjoy The Experience</p>
+              <div className='mt-[-1.5rem] mr-4.8'> <FaEnvelope></FaEnvelope></div>
+              </div>
+              
+              
+            </div>
+            <Link to='/BrowseSpaces'><button className='buttons bg-pink-800 mt-12 ml-[5rem] h-[6vh] w-[16rem] rounded-[1rem] text-white'>
+
+            Discover Exciting Events Now!</button></Link>
+
+
+            </div>
+            
+          {/*second column */} 
+            
           <div className='bg-white rounded-5' >
-           <Slider/>
+          <div className='mt-[10rem] ml-[5rem]'>
+          <img src={img1} alt="img" />
           </div>
+         {/*Event organizer */} 
+          <div className='ml-[5rem] mt-[15rem] fonts'>
+              <p className='vendors  text-slate-800 text-3xl font-bold'>Event Organizers</p>
+
+              <div className='mt-10 '> <p className='ml-8 text-slate-600 text-2xl'> Create Your profile</p>
+              <div className='mt-[-1.5rem]'> <FaEnvelope></FaEnvelope></div>
+              </div>
+
+              <div className='mt-10 '> <p className='ml-8  text-slate-600 text-2xl '>Find Great Vendors</p>
+              <div className='mt-[-1.5rem] '> <FaEnvelope></FaEnvelope></div>
+              </div>
+
+              <div className='mt-10 '> <p className='ml-8  text-slate-600 text-2xl'>Host Memorable Events</p>
+              <div className='mt-[-1.5rem] '> <FaEnvelope></FaEnvelope></div>
+              </div>
+
+              <div className='mt-10 '> <p className='ml-8  text-slate-600 text-2xl'>Plan with Confidence</p>
+              <div className='mt-[-1.5rem]'> <FaEnvelope></FaEnvelope></div>
+              </div>
+
+              <div className='mt-10 '> <p className='ml-8  text-slate-600 text-2xl'> Easy & Safe Booking</p>
+              <div className='mt-[-1.5rem] mr-4.8'> <FaEnvelope></FaEnvelope></div>
+              </div>
+              
+              
+            </div>
+            <Link to='/Vendors'><button className='buttons bg-pink-800 mt-12 ml-[5rem]  h-[6vh] w-[12rem] rounded-[1rem] text-white'>
+
+            Get Started Now!</button></Link>
+
+            {/*Client*/}
+
+            <div className='mt-[18rem]'>
+            <img src={img4} alt="img" />
+            </div>
+          
+         
+          </div> 
+           
+           
+
         </div>
       </section>
        {/* section3*/}
-      <section id="galaxy3" className='flex bg-white mt-10  m-10'>
+      {/* <section id="galaxy3" className='flex bg-white   m-10'>
         <div id="grid-container3"  className="grid bg-white h-full w-full">
-         <div>
-          <p className=' text-blue-950 text-2xl m-5 mt-2  font-mono'>Exprerience endless adventure with your photographer view beautiful photographs made by professional
+        <div>
+          <p className=' greens text-blue-950 text-2xl m-5 mt-2  '>Exprerience endless adventure with your photographer view beautiful photographs made by professional
           Photographers. Remember Photographs are not taken you make them.</p> 
           <CarouselSpacing></CarouselSpacing>
-        </div>
         </div> 
-      </section>
+        </div> 
+      </section> */}
        {/*section4*/}
-      <section id='galaxy4' className='flex bg-white w-90 mt-10 m-10'>
+      {/* <section id='galaxy4' className='flex bg-white w-90 mt-10 m-10'>
         <div id='grid-container4' className="grid  bg-white h-full w-full grid-cols-2 gap-5">
           <div  className='bg-white rounded-10'>
             <img src={img2} alt="img" className='w-full h-full' />
@@ -127,8 +226,8 @@ useEffect(() => {
             </div>
           </div>
         </div>
-      </section>
-       {/* section5*/}
+      </section> */}
+       {/* section5
       <section id='galaxy5' className='flex bg-white w-90 m-10 mt-10'>
         <div id="grid-container5" className="grid  bg-white h-full w-full">
         <p className='text-[#010038] text-2xl m-5 mt-2  font-mono'>
@@ -136,25 +235,34 @@ useEffect(() => {
         </p>
           <CarouselDemo></CarouselDemo>
         </div>
-      </section>
+      </section> */}
        {/*section6*/}
       <section id='galaxy6' className='flex bg-white w-full m-0 mt-10 justify-center'>
-        <div id='grid-cointainer6' className="grid  bg-[#010038] h-full w-full  justify-center">
+        <div id='grid-cointainer6' className="grid  bg-pink-800 h-full w-full  justify-center">
+         <div className='justify-center m-[3rem] '>
+          
+         <h1 className='text-white text-4xl font-bold tracking-wider ml-[20rem] '>
+         Stay in the Loop!</h1>
+         <div className='text-white text-3xl font-semibold tracking-wider mt-5'>
+         Get the latest on trending venues, top-notch vendors, 
+         and exclusive planning tools delivered straight to your inbox. Join our community now!
+         </div>
+
+             <div>
+             <Link to='/Vendors' ><button className='text-[#06355d] bg-white mt-7 h-10 w-[10rem] rounded-md hover:bg-orange-700'>Vendors</button></Link>
+             <Link to='/SignUp' ><button className='text-[#06355d] bg-white mt-[-5rem] h-10 w-[10rem] rounded-md hover:bg-orange-700 ml-[15rem]'>Sign up</button></Link>
+             </div>
+            
+
+            
+         </div>
+         {/* <div>
+             <Link to='/SignUp' ><button className='text-[#06355d] bg-white mt-[-35rem] h-10 w-[10rem] rounded-md hover:bg-orange-700 ml-[15rem]'>Sign up</button></Link>
+             </div> */}
          
-            <h2 className="mt-8 text-white font-serif text-3xl ml-[25rem] font-bold">Stay in know</h2>
-            <p className='text-[#e3dbdb] relative mt-[-2em] font-light text-xl'>Sign up to get events emails from Peerspace.com, including new fashions, discounts, modern planning of events and information about Peerspace.com <br /> 
-            </p>
+         
+      
             
-            <form className='w-[none]  border-[none]  mt-[-2rem]'>
-             <input type="email" name='email' placeholder='Your email address' required className='
-             h-[7vh] border-none border-[none] w-[50%] ml-[12rem]'/>
-             <button type="submit" value="Subscribe" className=' border-[none] bg-blue-700 ml-2 text-white 
-             h-[7vh] w-[8em]'> Subscribe</button>
-            </form>
-            
-            
-            <h3 className='text-white ml-[23rem]'>You can opt out at any time. See our <a href="#" className='underline text-blue-700'>privacy statement</a></h3>
-           
          
         </div>
       </section>
