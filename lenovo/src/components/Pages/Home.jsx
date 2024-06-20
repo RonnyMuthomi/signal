@@ -128,7 +128,7 @@ useEffect(() => {
               
               
             </div>
-            <Link to='/BrowseSpaces'><button className='buttons bg-pink-800 mt-12 ml-[5rem] h-[6vh] w-[16rem] rounded-[1rem] text-white'>
+            <Link to='/Browse'><button className='buttons bg-pink-800 mt-12 ml-[5rem] h-[6vh] w-[16rem] rounded-[1rem] text-white'>
 
             Discover Exciting Events Now!</button></Link>
 
@@ -237,7 +237,7 @@ useEffect(() => {
         </div>
       </section> */}
        {/*section6*/}
-      <section id='galaxy6' className='flex bg-white w-full m-0 mt-10 justify-center'>
+      <section id='galaxy6' className='flex bg-white w-full m-0 mt-[12rem] justify-center'>
         <div id='grid-cointainer6' className="grid  bg-pink-800 h-full w-full  justify-center">
          <div className='justify-center m-[3rem] '>
           

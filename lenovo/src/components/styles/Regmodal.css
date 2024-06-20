@@ -1,43 +1,46 @@
- /* #LG,
- #terms {
-     color: #F3950D;
-     text-decoration: none;
- }
- 
- .field-group {
-     width: 100%;
-     position: relative;
- }
- 
- .input-field {
-     width: 42%;
-     outline: 0;
-     border: 2px solid #999999;
-     border-radius: 3px;
-     background: transparent;
-     color: #999999;
-     height: 6vh;
-     /*padding-left: 60px;
- }
- /*.input-field::placeholder {
-      color: #999999;
-  }
- 
- .icon {
-     position: absolute;
-     left: 36%;
-     top: 8px;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     color: #999999;
-     font-size: 1.6em;
- }
- /* .input-field:focus {
-     color: #ffffff;
-     border-color: #ffffff;
- }
- 
- .input-field:focus~.icon {
-     color: #ffffff;
- } */
+.formContainer {
+    margin-top: 2rem;
+    border: 1px solid #c9c5c2;
+    margin-left: 14rem;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    /* border-radius: 0.5rem; */
+    background-color: whitesmoke;
+    width: 50rem;
+    height: 70vh;
+}
+
+.formContainer #FORMS .inputS {
+    width: 10rem;
+    margin-left: 2.5rem;
+    margin-top: 2rem;
+    width: 42.3rem;
+    height: 6vh;
+    border-radius: 0.5rem;
+    border: 1px solid rgb(47, 46, 46);
+}
+
+.Icons {
+    margin-left: 41.8rem;
+    margin-top: -1.6rem;
+    font-size: large;
+    color: #999999;
+}
+
+.firsts {
+    border-radius: 0.5rem;
+    border: 1px solid rgb(47, 46, 46);
+}
+
+.Ficons {
+    margin-left: 20rem;
+    margin-top: -1.8rem;
+    font-size: large;
+    color: #999999;
+}
+
+.Ficons2 {
+    margin-left: 42rem;
+    margin-top: -1rem;
+    font-size: large;
+    color: #999999;
+}

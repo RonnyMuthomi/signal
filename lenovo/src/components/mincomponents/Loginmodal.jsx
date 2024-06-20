@@ -79,7 +79,7 @@ const handleLogin = async (e) => {
         </div>
        </div>
        
-       <li className="list-none m-5"> <input type="checkbox"/> Remember me <a href="#" className="ml-[15rem] text-orange-600">forgot password?</a></li>
+       <li className="list-none m-5"> <input type="checkbox"/> Remember me <a href="/SignUp" className="ml-[15rem] text-orange-600">forgot password?</a></li>
        
        <input type="submit" value="Login" className='mt-4 m-5 w-[92.3%] h-[6vh] border-none bg-orange-500 text-white'/>
        <p className="m-5">Do not have an account? <a href="/Signup" className="text-orange-600">Sign up</a></p>

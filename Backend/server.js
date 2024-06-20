@@ -1,85 +1,81 @@
 const express = require('express');
-//const mongoose = require('mongoose');
+const mongoose = require('mongoose');
 const cors = require('cors');
 const path = require('path');
-
-const dbconfig = require('../backend/config/db.congif.js')
-
-const bodyParser = require('body-parser');
-const userModels = require('../backend/model/user.js')
-
-
+const dbconfig = require('../backend/config/db.congif.js');
+const portfolioRoutes = require('./routes/imageP.js');
+const userModels = require('./model/user.js');
+const bookingRoutes = require('./routes/booking.js');
+const mad = require('./routes/portfolio.js');
+const trialRoutes = require('./routes/trial.js');
+const authMiddleware = require('./middleware/authMiddleware');
+const authRoutes = require('./routes/auth');
 const app = express();
 
+// Middleware
+app.use(cors());
 app.use(express.json());
-app.use(cors({ origin: 'http://localhost:5173' }));
-app.use(bodyParser.json());
+app.use(express.urlencoded({ extended: true }));
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
-//Read api
 
-//http://localhost:8081/
+
+// Authentication Routes
+app.use('/api/auth', authRoutes);
+
+// General CRUD routes
 app.get('/', async(req, res) => {
-    const data = await userModels.find({})
+    try {
+        const data = await userModels.find({});
+        res.json({ success: true, data: data });
+    } catch (error) {
+        res.status(500).json({ success: false, message: error.message });
+    }
+});
 
-    res.json({ success: true, data: data })
-})
-
-// create (post)
-
-//http://localhost:8081/create
-/*
-  name,
-  email,
-  mobile,
-*/
 app.post('/create', async(req, res) => {
-    console.log(req.body)
-    const data = new userModels(req.body)
-    await data.save()
+    try {
+        const data = new userModels(req.body);
+        await data.save();
+        res.json({ success: true, message: 'Data saved successfully', data: data });
+    } catch (error) {
+        res.status(500).json({ success: false, message: error.message });
+    }
+});
 
-    res.json({ success: true, message: 'data saved successfully', data: data })
-})
-
-// update data
-
-//http://localhost:8081/create
-
-/** 
- * {
- * id:""
- * name:""
- * email:""
- * mobile:""
- * }
- */
 app.put('/update', async(req, res) => {
-    console.log(req.body)
-    const { id, ...rest } = req.body
-    const data = await userModels.updateOne({ _id: id }, rest)
-    console.log(rest)
-    res.json({ success: true, message: 'data updated successfully', data: data })
+    try {
+        const { _id, ...rest } = req.body;
+        const data = await userModels.updateOne({ _id: _id }, rest);
+        res.json({ success: true, message: 'Data updated successfully', data: data });
+    } catch (error) {
+        res.status(500).json({ success: false, message: error.message });
+    }
+});
 
-
-})
-
-// delete api
-
-//http://localhost:8081/delete/id
 app.delete('/delete/:id', async(req, res) => {
-    const id = req.params.id
-    console.log(id)
-    const data = await userModels.deleteOne({ _id: id })
-    res.json({ success: true, message: 'data deleted successfully', data: data })
-})
+    try {
+        const id = req.params.id;
+        const data = await userModels.deleteOne({ _id: id });
+        res.json({ success: true, message: 'Data deleted successfully', data: data });
+    } catch (error) {
+        res.status(500).json({ success: false, message: error.message });
+    }
+});
 
+// Protected Route Example
+app.get('/api/protected', authMiddleware, (req, res) => {
+    res.json({ message: 'This is a protected route', user: req.user });
+});
 
+// Additional Routes
+app.use('/api/two', trialRoutes);
+app.use('/api/one', mad);
+app.use('/api/bookings', bookingRoutes);
+app.use('/api/portfolio', portfolioRoutes);
 
-
-
-//app.use('/api', userRouter);
-
-const POST = process.env.POST || 8081
-
-app.listen(POST, () => {
-    console.log('server running');
-})
+// Server Start
+const PORT = process.env.PORT || 8081;
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+});

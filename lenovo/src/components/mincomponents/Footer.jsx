@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <>
       <footer className='flex w-full bg-white '>
-      <div className='mt-[5rem] ml-[30rem]'>FOLLOW US</div>
+      <div className='mt-[10rem] ml-[30rem]'>FOLLOW US</div>
       <div className='mt-[10rem] '>
       <ul className='flex  mr-[5rem]'>
       <Link to=""><FaEnvelope></FaEnvelope></Link>
