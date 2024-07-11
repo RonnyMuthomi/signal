@@ -23,7 +23,8 @@ router.post('/upload', upload.single('image'), (req, res) => {
 
     const newPortfolio = new Portfolio({
         image: req.file.path,
-        caption: req.body.caption
+        caption: req.body.caption,
+        // host: req.body.host
     });
 
     newPortfolio.save()

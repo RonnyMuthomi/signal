@@ -8,7 +8,11 @@ const PortfolioSchema = new mongoose.Schema({
     caption: {
         type: String,
         required: true
-    }
+    },
+    // host: {
+    //     type: String,
+    //     required: true
+    // }
 });
 
 module.exports = mongoose.model('Portfolio', PortfolioSchema);

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import '../styles/career.css';
+// import '../styles/career.css';
 import { FaEnvelope, FaUser } from "react-icons/fa";
 import { MdClear } from 'react-icons/md';
 import { Link } from "react-router-dom";

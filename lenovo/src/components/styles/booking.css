@@ -1,9 +1,9 @@
-.bookings-container {
+.Bookings-container {
     height: 70vh;
-    width: 30%;
-    background-color: aqua;
+    width: 35%;
+    background-color: white;
     margin-left: 43rem;
-    margin-top: -26.5rem;
+    margin-top: -30rem;
     padding: 2px;
     border-radius: 5px;
     box-sizing: border-box;
@@ -19,11 +19,36 @@
     display: flex;
     border: 1px solid grey;
     padding: 2px;
-    margin: 5px;
-    margin-left: 3rem;
-    width: 15rem;
+    margin-top: 2rem;
+    margin-left: 1rem;
+    width: 10rem;
     border-radius: 0.5rem;
     outline: none;
+    height: 6vh;
+}
+
+.starttime {
+    display: flex;
+    border: 1px solid grey;
+    padding: 2px;
+    margin-top: -2rem;
+    margin-left: 14rem;
+    width: 10rem;
+    border-radius: 0.5rem;
+    outline: none;
+    height: 6vh;
+}
+
+.endtime {
+    display: flex;
+    border: 1px solid grey;
+    padding: 2px;
+    margin-top: 2rem;
+    margin-left: 14rem;
+    width: 10rem;
+    border-radius: 0.5rem;
+    outline: none;
+    height: 6vh;
 }
 
 #LAbels {
@@ -40,8 +65,37 @@
 
 /* image container */
 
-.portfolio-detail {
+.Portfolio-detail {
     margin-top: 2rem;
     margin-left: 3rem;
     border-radius: 5px;
+}
+
+.portfolio-Image {
+    width: 40rem;
+    height: 80vh;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.Host {
+    margin-left: 58rem;
+    justify-content: flex-end;
+    margin-right: 5rem;
+    position: relative;
+    border: 1px solid rgb(169, 167, 167);
+    width: 10rem;
+    height: 7vh;
+    font-size: large;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    top: -8rem;
+}
+
+.response-message {
+    color: red;
+    margin-left: 51rem;
+    position: absolute;
+    top: 33rem;
 }

@@ -7,24 +7,24 @@ const BookingSchema = new mongoose.Schema({
         required: true
     },
 
-    clientName: {
-        type: String,
-        required: true
-    },
-
-    clientEmail: {
-        type: String,
-        required: true
-    },
-
-    bookingDate: {
+    selectdate: {
         type: Date,
         required: true
     },
 
-    message: {
-        type: String
-    }
+    starttime: {
+        type: String,
+        required: true
+    },
+
+    endtime: {
+        type: String,
+        required: true
+    },
+
+    // message: {
+    //     type: String
+    // }
 });
 
 module.exports = mongoose.model('Booking', BookingSchema);

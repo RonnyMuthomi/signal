@@ -10,7 +10,7 @@ import {Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 //import Slider from '../mincomponents/Slider'
 //import { CarouselDemo } from '../ui/Demo/Carousel3'
-import { FaEnvelope} from "react-icons/fa";
+//import { FaEnvelope} from "react-icons/fa";
 
 
 export default function Home() {
@@ -62,7 +62,7 @@ useEffect(() => {
         {/* section2*/}
       <section id='galaxy2' className='flex bg-orange-400 mt-0  w-90 m-10  '>
         <div id="grid-container2" className="grid bg-orange-400 h-full w-full grid-cols-2 ">
-       
+        
         
         
           <div className='bg-white rounded-5'>
@@ -70,24 +70,24 @@ useEffect(() => {
             <div className='ml-[5rem] mt-[10rem] fonts'>
               <p className='vendors  text-slate-800 text-3xl font-bold'>Vendors</p>
 
-              <div className='mt-10 '> <p className='ml-8 text-slate-600 text-2xl'> Create Your profile</p>
-              <div className='mt-[-1.5rem]'> <FaEnvelope></FaEnvelope></div>
+              <div className='mt-8 '> <p className='ml-8 text-slate-600 text-2xl'> Create Your profile</p>
+              <div className='mt-[-1.5rem]'> <img src="/image1.png" alt="img" className=' iconsimage' /></div>
               </div>
 
-              <div className='mt-10 '> <p className='ml-8  text-slate-600 text-2xl '> Showcase Your Services</p>
-              <div className='mt-[-1.5rem] '> <FaEnvelope></FaEnvelope></div>
+              <div className='mt-8 '> <p className='ml-8  text-slate-600 text-2xl '> Showcase Your Services</p>
+              <div className='mt-[-1.5rem] '> <img src="/image2.png" alt="img" className=' iconsimage'/></div>
               </div>
 
-              <div className='mt-10 '> <p className='ml-8  text-slate-600 text-2xl'> Receive Booking Requests</p>
-              <div className='mt-[-1.5rem] '> <FaEnvelope></FaEnvelope></div>
+              <div className='mt-8 '> <p className='ml-8  text-slate-600 text-2xl'> Receive Booking Requests</p>
+              <div className='mt-[-1.5rem] '> <img src="/image3.png" alt="img" className=' iconsimage' /></div>
               </div>
 
-              <div className='mt-10 '> <p className='ml-8  text-slate-600 text-2xl'> Deliver Outstanding Services</p>
-              <div className='mt-[-1.5rem]'> <FaEnvelope></FaEnvelope></div>
+              <div className='mt-8 '> <p className='ml-8  text-slate-600 text-2xl'> Deliver Outstanding Services</p>
+              <div className='mt-[-1.5rem] iconsimage'> <img src="/image4.png" alt="img" className=' iconsimage'/></div>
               </div>
 
-              <div className='mt-10 '> <p className='ml-8  text-slate-600 text-2xl'> Get Paid Securely</p>
-              <div className='mt-[-1.5rem] mr-4.8'> <FaEnvelope></FaEnvelope></div>
+              <div className='mt-8 '> <p className='ml-8  text-slate-600 text-2xl'> Get Paid Securely</p>
+              <div className='mt-[-1.5rem] mr-4.8 iconsimage'>  <img src="/image5.png" alt="img" className=' iconsimage'/></div>
               </div>
               
               
@@ -106,24 +106,24 @@ useEffect(() => {
            <div className='ml-[5rem] mt-[10rem] fonts'>
               <p className='vendors  text-slate-800 text-3xl font-bold'>Clients</p>
 
-              <div className='mt-10 '> <p className='ml-8 text-slate-600 text-2xl'> Create Your profile</p>
-              <div className='mt-[-1.5rem]'> <FaEnvelope></FaEnvelope></div>
+              <div className='mt-8 '> <p className='ml-8 text-slate-600 text-2xl'> Create Your profile</p>
+              <div className='mt-[-1.5rem]'> <img src="/image1.png" alt="img" className=' iconsimage' /></div>
               </div>
 
-              <div className='mt-10 '> <p className='ml-8  text-slate-600 text-2xl '> Explore Events</p>
-              <div className='mt-[-1.5rem] '> <FaEnvelope></FaEnvelope></div>
+              <div className='mt-8 '> <p className='ml-8  text-slate-600 text-2xl '> Explore Events</p>
+              <div className='mt-[-1.5rem] '> <img src="/image10.png" alt="img" className=' iconsimage' /></div>
               </div>
 
-              <div className='mt-10 '> <p className='ml-8  text-slate-600 text-2xl'> Book Tickets Easily</p>
-              <div className='mt-[-1.5rem] '> <FaEnvelope></FaEnvelope></div>
+              <div className='mt-8 '> <p className='ml-8  text-slate-600 text-2xl'> Book Tickets Easily</p>
+              <div className='mt-[-1.5rem] '> <img src="/image11.png" alt="img" className=' iconsimage' /></div>
               </div>
 
-              <div className='mt-10 '> <p className='ml-8  text-slate-600 text-2xl'> Connect with Hosts</p>
-              <div className='mt-[-1.5rem]'> <FaEnvelope></FaEnvelope></div>
+              <div className='mt-8 '> <p className='ml-8  text-slate-600 text-2xl'> Connect with Hosts</p>
+              <div className='mt-[-1.5rem]'> <img src="/image12.png" alt="img" className=' iconsimage' /></div>
               </div>
 
-              <div className='mt-10 '> <p className='ml-8  text-slate-600 text-2xl'> Enjoy The Experience</p>
-              <div className='mt-[-1.5rem] mr-4.8'> <FaEnvelope></FaEnvelope></div>
+              <div className='mt-8 '> <p className='ml-8  text-slate-600 text-2xl'> Enjoy The Experience</p>
+              <div className='mt-[-1.5rem] mr-4.8'>  <img src="/image13.png" alt="img" className=' iconsimage' /></div>
               </div>
               
               
@@ -138,42 +138,42 @@ useEffect(() => {
           {/*second column */} 
             
           <div className='bg-white rounded-5' >
-          <div className='mt-[10rem] ml-[5rem]'>
+          <div className='mt-[14rem] ml-[3rem]'>
           <img src={img1} alt="img" />
           </div>
          {/*Event organizer */} 
-          <div className='ml-[5rem] mt-[15rem] fonts'>
+          <div className='ml-[10rem] mt-[15rem] fonts'>
               <p className='vendors  text-slate-800 text-3xl font-bold'>Event Organizers</p>
 
-              <div className='mt-10 '> <p className='ml-8 text-slate-600 text-2xl'> Create Your profile</p>
-              <div className='mt-[-1.5rem]'> <FaEnvelope></FaEnvelope></div>
+              <div className='mt-8 '> <p className='ml-8 text-slate-600 text-2xl'> Create Your profile</p>
+              <div className='mt-[-1.5rem]'> <img src="/image1.png" alt="img" className=' iconsimage' /></div>
               </div>
 
-              <div className='mt-10 '> <p className='ml-8  text-slate-600 text-2xl '>Find Great Vendors</p>
-              <div className='mt-[-1.5rem] '> <FaEnvelope></FaEnvelope></div>
+              <div className='mt-8 '> <p className='ml-8  text-slate-600 text-2xl '>Find Great Vendors</p>
+              <div className='mt-[-1.5rem] '> <img src="/image6.png" alt="img" className=' iconsimage' /></div>
               </div>
 
-              <div className='mt-10 '> <p className='ml-8  text-slate-600 text-2xl'>Host Memorable Events</p>
-              <div className='mt-[-1.5rem] '> <FaEnvelope></FaEnvelope></div>
+              <div className='mt-8 '> <p className='ml-8  text-slate-600 text-2xl'>Host Memorable Events</p>
+              <div className='mt-[-1.5rem] '> <img src="/image7.png" alt="img" className=' iconsimage' /></div>
               </div>
 
-              <div className='mt-10 '> <p className='ml-8  text-slate-600 text-2xl'>Plan with Confidence</p>
-              <div className='mt-[-1.5rem]'> <FaEnvelope></FaEnvelope></div>
+              <div className='mt-8 '> <p className='ml-8  text-slate-600 text-2xl'>Plan with Confidence</p>
+              <div className='mt-[-1.5rem]'> <img src="/image8.png" alt="img" className=' iconsimage' /></div>
               </div>
 
-              <div className='mt-10 '> <p className='ml-8  text-slate-600 text-2xl'> Easy & Safe Booking</p>
-              <div className='mt-[-1.5rem] mr-4.8'> <FaEnvelope></FaEnvelope></div>
+              <div className='mt-8 '> <p className='ml-8  text-slate-600 text-2xl'> Easy & Safe Booking</p>
+              <div className='mt-[-1.5rem] mr-4.8'> <img src="/image9.png" alt="img" className=' iconsimage' /></div>
               </div>
               
               
             </div>
-            <Link to='/Vendors'><button className='buttons bg-pink-800 mt-12 ml-[5rem]  h-[6vh] w-[12rem] rounded-[1rem] text-white'>
+            <Link to='/Vendors'><button className='buttons bg-pink-800 mt-12 ml-[10rem]  h-[6vh] w-[12rem] rounded-[1rem] text-white'>
 
             Get Started Now!</button></Link>
 
             {/*Client*/}
 
-            <div className='mt-[18rem]'>
+            <div className='mt-[16rem]'>
             <img src={img4} alt="img" />
             </div>
           
@@ -237,24 +237,21 @@ useEffect(() => {
         </div>
       </section> */}
        {/*section6*/}
-      <section id='galaxy6' className='flex bg-white w-full m-0 mt-[12rem] justify-center'>
-        <div id='grid-cointainer6' className="grid  bg-pink-800 h-full w-full  justify-center">
+      <section id='galaxy6' className='flex bg-white w-[95%] m-6 rounded-[2rem]  mt-[16rem] justify-center'>
+        <div id='grid-cointainer6' className="grid  bg-pink-800 h-full w-full rounded-[2rem] justify-center">
          <div className='justify-center m-[3rem] '>
           
-         <h1 className='text-white text-4xl font-bold tracking-wider ml-[20rem] '>
+         <h1 className='text-white text-2xl font-bold tracking-wider ml-[20rem] '>
          Stay in the Loop!</h1>
-         <div className='text-white text-3xl font-semibold tracking-wider mt-5'>
+         <div className='text-white text-2xl font-semibold tracking-wider mt-5'>
          Get the latest on trending venues, top-notch vendors, 
          and exclusive planning tools delivered straight to your inbox. Join our community now!
          </div>
 
-             <div>
+             {/* <div>
              <Link to='/Vendors' ><button className='text-[#06355d] bg-white mt-7 h-10 w-[10rem] rounded-md hover:bg-orange-700'>Vendors</button></Link>
              <Link to='/SignUp' ><button className='text-[#06355d] bg-white mt-[-5rem] h-10 w-[10rem] rounded-md hover:bg-orange-700 ml-[15rem]'>Sign up</button></Link>
-             </div>
-            
-
-            
+             </div> */}
          </div>
          {/* <div>
              <Link to='/SignUp' ><button className='text-[#06355d] bg-white mt-[-35rem] h-10 w-[10rem] rounded-md hover:bg-orange-700 ml-[15rem]'>Sign up</button></Link>
@@ -267,7 +264,7 @@ useEffect(() => {
         </div>
       </section>
       </main>
-       {/*Footer*/}
+      
       
     </>
   )

@@ -12,12 +12,10 @@ const userSchema = mongoose.Schema({
     email: {
         type: String,
         required: true,
-        unique: true,
     },
     phone: {
         type: String,
         required: true,
-        unique: true,
     },
     password: {
         type: String,
@@ -25,7 +23,8 @@ const userSchema = mongoose.Schema({
     },
     role: {
         type: String,
-        enum: ['client', 'vendor'],
+        enum: ['client', 'vendors'],
+        default: "client",
         required: true,
     }
 });

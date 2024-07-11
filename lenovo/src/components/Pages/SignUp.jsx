@@ -5,20 +5,71 @@ import { MdDock} from "react-icons/md";
 //import {  useNavigate } from "react-router-dom"
 //import { useState } from 'react'
 import '../styles/Regmodal.css'
-//import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 
 export default function SignUp() {
+  const navigate =useNavigate();
+  const [formData, setFormData]=useState({
+    firstname:'',
+    lastname:'',
+    email:'',
+    phone:'',
+    password:''
+
+  })
+
+  const handleInputChange=(event)=>{
+    const {name, value}= event.target;
+    setFormData({
+      ...formData,
+      [name]:value
+    })
+  }
+
+  const handleSubmit =async (e) =>{
+    e.preventDefault()
+     try{
+      const response = await fetch("http://localhost:8081/api/two/register",{
+        method:"POST",
+        headers:{
+          'Content-type':"application/json"
+        },
+        body:JSON.stringify(formData)
+      })
+      const result = await response.json();
+      console.log(result);
+      navigate('/Loginmodal')
+
+     }
+     catch(error){
+      console.log(error.message)
+
+     }
+     finally{
+      setFormData({
+        firstname:'',
+        lastname:'',
+        email:'',
+        phone:'',
+        password:''
+      })
+
+     }
+   
+  }
   return (
     <>
-    <main className="h-[100vh] bg-[whitesmoke] mt-0 ">
+    <main className="h-[100vh] bg-[white] mt-0 relative ">
     <div className="formContainer">
-    <form id="FORMS">
+    <form id="FORMS" onSubmit={handleSubmit}>
      
      <div>
       <input  type="text" id="firstname" name="firstname" placeholder="First Name" className=" firsts mt-8 ml-10 h-[6vh]
-      w-[20rem]"  required />
+      w-[20rem]" value={formData.firstname} onChange={handleInputChange} required />
       <input  type="text" id="lastname" name="lastname" placeholder="Last Name"  className=" firsts  mt-8 ml-10 h-[6vh]
-      w-[20rem]" required />
+      w-[20rem]" value={formData.lastname} onChange={handleInputChange} required />
       <div className="Ficons">
      
       <FaUser/>
@@ -30,7 +81,8 @@ export default function SignUp() {
      </div>
 
      <div>
-      <input  type="email" id="email" name="email" placeholder="Email Address" className="inputS"  required />
+      <input  type="email" id="email" name="email" placeholder="Email Address" className="inputS" 
+      value={formData.email} onChange={handleInputChange} required />
       
       <div className="Icons">
       <FaEnvelope/>
@@ -39,7 +91,8 @@ export default function SignUp() {
      </div>
      
      <div>
-      <input  type="number" id="phone" name="phone" placeholder="Phone" className="inputS"  required />
+      <input  type="number" id="phone" name="phone" placeholder="Phone" className="inputS" 
+      value={formData.phone} onChange={handleInputChange} required />
       
       <div className="Icons">
       
@@ -49,7 +102,8 @@ export default function SignUp() {
      </div>
      
      <div>
-      <input  type="password" id="password" name="password" placeholder="Password" className="inputS"  required />
+      <input  type="password" id="password" name="password" placeholder="Password" className="inputS" 
+      value={formData.password} onChange={handleInputChange} required />
       
       <div className="Icons">
       

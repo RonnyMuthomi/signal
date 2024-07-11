@@ -8,20 +8,29 @@ const userModels = require('./model/user.js');
 const bookingRoutes = require('./routes/booking.js');
 const mad = require('./routes/portfolio.js');
 const trialRoutes = require('./routes/trial.js');
-const authMiddleware = require('./middleware/authMiddleware');
-const authRoutes = require('./routes/auth');
+const loginRoutes = require('./routes/login.js')
+const vendorauth = require('./routes/vendors')
+const usersRoutes = require('./routes/getclient.js')
+const getsvendorRoutes = require('./routes/getvendor.js')
+
+const bodyparser = require('body-parser')
+    // const createAdminAccount = require('./scripts/vendors.js')
+
+
 const app = express();
 
 // Middleware
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(bodyparser.json())
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 
-
+// createAdminAccount();
 // Authentication Routes
-app.use('/api/auth', authRoutes);
+
+// app.use('auth/reg', signupRoute)
 
 // General CRUD routes
 app.get('/', async(req, res) => {
@@ -63,16 +72,14 @@ app.delete('/delete/:id', async(req, res) => {
     }
 });
 
-// Protected Route Example
-app.get('/api/protected', authMiddleware, (req, res) => {
-    res.json({ message: 'This is a protected route', user: req.user });
-});
-
-// Additional Routes
+app.use('/api/event', getsvendorRoutes)
+app.use('/api/val', usersRoutes)
+app.use('/api/log', loginRoutes)
 app.use('/api/two', trialRoutes);
 app.use('/api/one', mad);
 app.use('/api/bookings', bookingRoutes);
 app.use('/api/portfolio', portfolioRoutes);
+app.use('/api/ved', vendorauth);
 
 // Server Start
 const PORT = process.env.PORT || 8081;
