@@ -69,6 +69,11 @@ nav ul li a:not(.active):hover {
     /* Ensure the greeting does not break into multiple lines  */
 }
 
+.top {
+    top: 0.5rem;
+    position: relative;
+}
+
 
 /* 
 .font {

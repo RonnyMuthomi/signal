@@ -21,34 +21,39 @@ export default function Loginmodal() {
     };
 
     const handleLogin = async (e) => {
-        e.preventDefault();
-        try {
-            const response = await fetch('http://localhost:8081/api/log/login', {
-                method: "POST",
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(formData)
-            });
+    e.preventDefault();
+    try {
+        const response = await fetch('http://localhost:8081/api/log/login', {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        });
 
-            if (response.ok) {
-                const result = await response.json();
-                localStorage.setItem('token', result.token);
-                setLoginMessage("Login successful!");
-                navigate('/'); // Navigate to home page
+        if (response.ok) {
+            const result = await response.json();
+            localStorage.setItem('token', result.token);
+            setLoginMessage("Login successful!");
+            if (result.role === 'vendor') {
+                navigate('/VendorHome'); // Navigate to VendorHome page
             } else {
-                setLoginMessage("Login failed! Check your credentials.");
+                navigate('/'); // Navigate to home page
             }
-        } catch (error) {
-            console.error(error.message);
-            setLoginMessage("An error occurred. Please try again.");
-        } finally {
-            setFormData({
-                email: "",
-                password: "",
-            });
+        } else {
+            setLoginMessage("Login failed! Check your credentials.");
         }
-    };
+    } catch (error) {
+        console.error(error.message);
+        setLoginMessage("An error occurred. Please try again.");
+    } finally {
+        setFormData({
+            email: "",
+            password: "",
+        });
+    }
+};
+
 
     return (
         <>

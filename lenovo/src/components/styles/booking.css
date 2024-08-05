@@ -1,4 +1,4 @@
-.Bookings-container {
+/* .Bookings-container {
     height: 70vh;
     width: 35%;
     background-color: white;
@@ -8,7 +8,7 @@
     border-radius: 5px;
     box-sizing: border-box;
     border: 1px solid rgb(169, 167, 167);
-    /* text-align: center; */
+    /* text-align: center; 
 }
 
 .serif {
@@ -63,7 +63,7 @@
 }
 
 
-/* image container */
+/* image container 
 
 .Portfolio-detail {
     margin-top: 2rem;
@@ -98,4 +98,31 @@
     margin-left: 51rem;
     position: absolute;
     top: 33rem;
+} */
+
+.Portfolio-detail {
+    border-radius: 5px;
+    width: 20rem;
+    height: 40vh;
 }
+
+.portfolio-detail img {
+    width: 200vw;
+    height: auto;
+}
+
+
+/* .Host {
+    margin-left: 58rem;
+    justify-content: flex-end;
+    margin-right: 5rem;
+    position: relative;
+    border: 1px solid rgb(169, 167, 167);
+    width: 10rem;
+    height: 7vh;
+    font-size: large;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    top: -8rem;
+} */

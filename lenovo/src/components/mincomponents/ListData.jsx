@@ -5,17 +5,20 @@ import '../styles/career.css';
 
 export default function ListData({ handleSubmit, handleOnChange, handleClose, rest }) {
   return (
-    <div className="bg-[#fefefe] flex tenda w-[25rem] ml-[15rem] absolute mt-[1rem] h-[40vh]">
+    <div className="bg-[#fefefe] flex tenda w-[25rem] ml-[15rem] absolute mt-[1rem] h-[60vh]">
       <MdClear className="hover:bg-red-700 ml-[20rem]" onClick={handleClose}></MdClear>
       <form id='forms' onSubmit={handleSubmit}>
-        <label id='labels' htmlFor="name">Name:</label>
-        <input className='inputs' type="text" id="name" name="name" onChange={handleOnChange} value={rest.name} />
+        <label id='labels' htmlFor="FName">FName:</label>
+        <input className='inputs' type="text" id="FName" name="firstname" onChange={handleOnChange} value={rest.name} />
+
+        <label id='labels' htmlFor="LName">LName:</label>
+        <input className='inputs' type="text" id="LName" name="lastname" onChange={handleOnChange} value={rest.name} />
 
         <label id='labels' htmlFor="email">Email:</label>
         <input className='inputs' type="email" id="email" name="email" onChange={handleOnChange} value={rest.email} />
 
-        <label id='labels' htmlFor="mobile">Mobile:</label>
-        <input className='inputs' type="number" id="mobile" name="mobile" onChange={handleOnChange} value={rest.mobile} /><br />
+        <label id='labels' htmlFor="phone">Phone:</label>
+        <input className='inputs' type="number" id="phone" name="phone" onChange={handleOnChange} value={rest.mobile} /><br />
 
         <button type="submit" className='bg-blue-400 text-white font-serif text-xl rounded-sm mt-5 w-[15rem]'>Submit</button>
       </form>

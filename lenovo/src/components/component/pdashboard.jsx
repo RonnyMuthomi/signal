@@ -15,7 +15,7 @@ export function Pdashboard() {
    const[portfolio, setPortfolio]=useState(false)
    const [image, setImage] = useState(null);
    const [caption, setCaption] = useState('');
-  //  const [host, setHost] = useState('');
+  //  const [vendor, setVendor] = useState('');
   //  const [portfolios, setPortfolios] = useState([]);//ued for retrieving from database
 
    const onFileChange = (e) => {
@@ -26,8 +26,8 @@ export function Pdashboard() {
     setCaption(e.target.value);
   };
 
-  // const onHostChange = (e) => {
-  //   setHost(e.target.value);
+  // const onVendorChange = (e) => {
+  //   setVendor(e.target.value);
   // };
 
 
@@ -36,7 +36,7 @@ export function Pdashboard() {
     const formData = new FormData();
     formData.append('image', image);
     formData.append('caption', caption);
-    // formData.append('host', host);
+    // formData.append('vendor', vendor);
 
     try {
       const res = await axios.post('http://localhost:8081/api/portfolio/upload', formData, {
@@ -57,21 +57,9 @@ export function Pdashboard() {
     }
   };
 
-  // const fetchPortfolios = async () => {
-  //   try {
-  //     const res = await axios.get('http://localhost:8081/api/portfolio');
-  //     setPortfolios(res.data);
-  //   } catch (err) {
-  //     console.error(err);
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   fetchPortfolios();
-  // }, []);
 
   return (
-    (<div className="flex min-h-screen w-full bg-slate-500">
+    (<div className="flex min-h-screen w-full bg-[whitesmoke]">
       <aside
         className="  left-0 relative z-10  w-[10rem] flex-col border-r bg-background flex mt-[1rem]">
         <nav className="flex flex-col items-center gap-4 px-2 sm:py-5">
@@ -98,7 +86,7 @@ export function Pdashboard() {
             <Tooltip>
               <TooltipTrigger asChild>
                 <Link
-                  href="#"
+                  href="/NotificationPage "
                   className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
                   prefetch={false}>
                   <BellIcon className="h-5 w-5" />
@@ -148,7 +136,7 @@ export function Pdashboard() {
       </aside>
       <div className="flex flex-col sm:gap-4 sm:py-4 sm:pl-14">
         <header
-          className="  flex h-14 items-center mr-5 rounded-md  px-4 ml-0 sm:border-0 bg-slate-400 sm:px-6 ">
+          className="  flex h-14 items-center mr-5 rounded-md  px-4 ml-0 sm:border-0 bg-[#06355d] text-white sm:px-6 ">
           <Sheet>
             <SheetTrigger asChild>
               <Button size="icon" variant="outline" className="sm:hidden">
@@ -157,7 +145,7 @@ export function Pdashboard() {
               </Button>
             </SheetTrigger>
             <SheetContent side="left" className="sm:max-w-xs">
-              <nav className="grid gap-6 text-lg font-medium ">
+              <nav className="grid gap-6 text-lg font-medium bg-[#06355d] ">
                 <Link
                   href="#"
                   className="group flex h-10 w-10 shrink-0 items-center justify-center gap-2 rounded-full bg-primary text-lg font-semibold text-primary-foreground md:text-base"
@@ -173,14 +161,14 @@ export function Pdashboard() {
                   Dashboard
                 </Link>
                 <Link
-                  href="#"
+                  to="/NotificationPage"
                   className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground"
                   prefetch={false}>
                   <BellIcon className="h-5 w-5" />
                   Notifications
                 </Link>
                 <Link
-                  href="#"
+                  to="/NotificationPage"
                   className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground"
                   prefetch={false}>
                   <MailIcon className="h-5 w-5" />
@@ -239,7 +227,7 @@ export function Pdashboard() {
                   <p className="text-white/80">Check out your upcoming events and plan accordingly.</p>
                 </div>
                 <Link
-                  href="#"
+                  to="/EventPage"
                   className="inline-flex items-center justify-center rounded-md bg-white px-4 py-2 text-sm font-medium text-[#ff6b6b] shadow-sm transition-colors hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2"
                   prefetch={false}>
                   View Events
@@ -287,7 +275,7 @@ export function Pdashboard() {
                   <p className="text-white/80">Stay connected with your clients and partners.</p>
                 </div>
                 <Link
-                  href="#"
+                  to="/NotificationPage"
                   className="inline-flex items-center justify-center rounded-md bg-white px-4 py-2 text-sm font-medium text-[#3498db] shadow-sm transition-colors hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2"
                   prefetch={false}>
                   View Messages
@@ -311,7 +299,7 @@ export function Pdashboard() {
                   <p className="text-white/80">Stay on top of your schedule and never miss an event.</p>
                 </div>
                 <Link
-                  href="#"
+                  to="/VendorCalender"
                   className="inline-flex items-center justify-center rounded-md bg-white px-4 py-2 text-sm font-medium text-[#1abc9c] shadow-sm transition-colors hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2"
                   prefetch={false}>
                   View Calendar
@@ -341,7 +329,7 @@ export function Pdashboard() {
                 <label htmlFor="file" id='Labels'>images</label>
                 <input type="file" id='file' name="image" onChange={onFileChange}/>
                 <textarea name="caption" id="caption" onChange={onCaptionChange} ></textarea>
-                {/* <input type="text" id='host' onChange={onHostChange} placeholder="Host name" />  */}
+                 {/* <input type="text" id='vendor' onChange={onVendorChange} placeholder="Host name" /> */}
                 <button type='submit' className='bg-blue-400 text-white font-serif text-xl mt-[0.8rem] ml-[3rem] w-[18rem] rounded-md'>Submit</button>
               </div>
             </form>

@@ -1,17 +1,24 @@
+require('dotenv').config();
+
+
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const path = require('path');
 const dbconfig = require('../backend/config/db.congif.js');
 const portfolioRoutes = require('./routes/imageP.js');
-const userModels = require('./model/user.js');
+const userModels = require('./model/signup');
 const bookingRoutes = require('./routes/booking.js');
 const mad = require('./routes/portfolio.js');
-const trialRoutes = require('./routes/trial.js');
+const trialRoutes = require('./routes/signup.js');
 const loginRoutes = require('./routes/login.js')
 const vendorauth = require('./routes/vendors')
 const usersRoutes = require('./routes/getclient.js')
 const getsvendorRoutes = require('./routes/getvendor.js')
+const manageClientProfile = require('./routes/manageClientProfile.js')
+const portfolioEdit = require('./routes/portfolioEdit.js')
+const portfolioDelete = require('./routes/portfolioDelete.js')
+
 
 const bodyparser = require('body-parser')
     // const createAdminAccount = require('./scripts/vendors.js')
@@ -72,6 +79,9 @@ app.delete('/delete/:id', async(req, res) => {
     }
 });
 
+app.use('/api/deletePortfolio', portfolioDelete)
+app.use('/api/editPortfolio', portfolioEdit)
+app.use('/api/clientprofile', manageClientProfile)
 app.use('/api/event', getsvendorRoutes)
 app.use('/api/val', usersRoutes)
 app.use('/api/log', loginRoutes)

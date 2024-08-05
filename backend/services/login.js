@@ -6,13 +6,15 @@ const { verifyToken } = require('../utils/authMiddle');
 
 async function login(email, password) {
     try {
-        console.log(`Attempting to login with email: ${email}`);
+        // console.log(`Attempting to login with email: ${email}`);
 
         // Check Vendor model
         let user = await Vendor.findOne({ email });
+        let role = "vendor";
         if (!user) {
             // Check Client model if not found in Vendor model
             user = await Client.findOne({ email });
+            role = "client";
         }
 
         if (!user) {
@@ -28,12 +30,13 @@ async function login(email, password) {
         console.log('Password is valid');
 
         const token = generateToken(user);
-        return token;
+        return { token, role }; // Include the role in the response
     } catch (error) {
         console.error('Error during login:', error.message);
         throw new Error('Invalid credentials');
     }
 }
+
 
 async function refreshToken(oldToken) {
     try {

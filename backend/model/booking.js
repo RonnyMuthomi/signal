@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 
+
 const BookingSchema = new mongoose.Schema({
     portfolioId: {
         type: mongoose.Schema.Types.ObjectId,
@@ -21,10 +22,22 @@ const BookingSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    event: {
+        type: String,
+        required: true
+    },
+    atendees: {
+        type: Number,
+        required: true
+    },
+    location: {
+        type: String,
+        required: true
+    },
 
-    // message: {
-    //     type: String
-    // }
+    message: {
+        type: String
+    }
 });
 
 module.exports = mongoose.model('Booking', BookingSchema);

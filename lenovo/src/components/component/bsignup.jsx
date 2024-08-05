@@ -51,6 +51,13 @@ export function Bsignup() {
       });
       const result = await response.json();
       console.log(result);
+      
+      // Store the vendorId in local storage
+      if (result.vendorId) {
+        localStorage.setItem('vendorId', result.vendorId);
+        console.log('Vendor signed up successfully', result.vendorId);
+      }
+
       navigate('/Loginmodal');
     } catch (error) {
       console.log(error.message);
@@ -123,6 +130,7 @@ export function Bsignup() {
           <Label htmlFor="password">Password</Label>
           <Input id="password" name='password' type="password" value={formData.password} onChange={handleOnChange} />
         </div>
+        <p id="account" className='mt-6 ml-10'>Already have an account? <a href="/Loginmodal" className="text-pink-800">Login</a></p>
         <Button className="w-full" type="submit">
           Create Account
         </Button>

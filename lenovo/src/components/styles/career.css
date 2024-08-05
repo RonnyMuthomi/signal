@@ -46,7 +46,7 @@
     border: 1px solid #c9c5c2;
     max-width: fit-content;
     position: absolute;
-    margin-left: 14rem;
+    margin-left: 5rem;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
     border-radius: 0.5rem;
 }
@@ -252,3 +252,19 @@
     border: 1px solid #ccc;
     border-radius: 4px;
 } */
+
+.message {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.message.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}

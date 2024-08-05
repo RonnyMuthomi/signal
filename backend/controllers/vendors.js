@@ -48,9 +48,9 @@ async function createAdminAccount(req, res) {
             role: role // Use the role from the request or the default
         });
 
-        await newVendor.save();
+        const savedVendor = await newVendor.save();
         console.log('Vendor added successfully');
-        return res.status(201).json({ message: 'Vendor added successfully' });
+        return res.status(201).json({ message: 'Vendor added successfully', vendorId: savedVendor._id });
     } catch (error) {
         console.error(error.message);
         return res.status(500).json({ message: 'Error creating vendor', error: error.message });
